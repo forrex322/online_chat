@@ -24,12 +24,16 @@ from personal.views import (
 
 from account.views import (
     register_view,
+    login_view,
+    logout_view,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_screen_view, name='home'),
-    path('registere/', register_view, name='register'),
+    path('register/', register_view, name='register'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout')
 ]
 
 if settings.DEBUG:
